@@ -1,0 +1,55 @@
+{
+  "account": [
+    {
+      "firstname": "Chinmay",
+      "lastname": "Gupta",
+      "mobile": 7860776799,
+      "email": "chinmay@gmail.com",
+      "password": "hello123",
+      "id": 1
+    },
+    {
+      "firstname": "Anto Prathik",
+      "lastname": "Savio",
+      "email": "anto@gmail.com",
+      "password": "ncEdYSc9R!LAZ6@",
+      "id": 2
+    },
+    {
+      "firstname": "Arghya",
+      "lastname": "BANDYOPADHYAY",
+      "mobile": 7224077631,
+      "email": "arghya@gmail.com",
+      "password": "arghya",
+      "id": 3
+    }
+  ],
+  "login": [
+    {
+      "email": "Arghya.Bandyopadhyay@natwest.com",
+      "password": "1234",
+      "id": 1
+    },
+    {
+      "email": "Arghya.Bandyopadhyay@natwest.com",
+      "password": "1234",
+      "id": 2
+    },
+    {
+      "email": "Arghya.Bandyopadhyay@natwest.com",
+      "password": "ddd",
+      "id": 3
+    },
+    {
+      "email": "Arghya.Bandyopadhyay@natwest.com",
+      "password": "1234",
+      "id": 4
+    },
+    {
+      "email": "anto@gmail.com",
+      "password": "ncEdYSc9R!LAZ6@",
+      "id": 5
+    }
+  ],
+  "customers": []
+}
