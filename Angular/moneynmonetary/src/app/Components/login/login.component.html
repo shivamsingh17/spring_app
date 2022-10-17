@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="card">
+      <div class="text-center">
+          <h1>Login</h1>
+          <h6> Enter username and password</h6>
+      </div>
+      <form [formGroup]="loginform" (ngSubmit)="loginuser()">
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-control-label">Email address</label>
+                <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                <span class="text-danger" *ngIf="loginform.controls['email'].invalid && (loginform.controls['email'].dirty || loginform.controls['email'].touched)">Enter Valid Email</span>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-control-label">Password</label>
+                <input formControlName="password" type="password" autocomplete="current-password" class="form-control" id="exampleInputPassword1">
+                <span class="text-danger" *ngIf="loginform.controls['password'].invalid && (loginform.controls['password'].dirty || loginform.controls['password'].touched)">password cannot be blank</span>
+
+              </div>
+              <ngx-recaptcha2 #captchaElem
+                  [siteKey]="siteKey"
+                  [type]="type"
+                  [size]="size"
+                  formControlName="recaptcha">
+                </ngx-recaptcha2>
+              <button type="submit" [disabled]="!loginform.valid" class="btn btn-outline-primary mt-2" >Submit</button>
+            </form>
+            <a routerLink="/register">new user ? click here</a>
+  </div>
+</div>
