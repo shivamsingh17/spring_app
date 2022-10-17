@@ -1,0 +1,137 @@
+.card{
+    margin-top:1vw;
+    border:none;
+    width:50vw;
+    padding:4vw;
+    position:sticky;
+    height: auto;
+}
+
+h1,
+  h3,
+  h4,
+  h5,
+  h6,
+  .h1,
+  .h3,
+  .h4,
+  .h5,
+  .h6 {
+    font-family: inherit;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: .5rem;
+    color: var(--natwest-purple);
+  }
+  
+  h1,
+  .h1 {
+    font-size: 1.625rem;
+  }
+  
+  h3,
+  .h3 {
+    font-size: 1.0625rem;
+  }
+  
+  h4,
+  .h4 {
+    font-size: .9375rem;
+  }
+  
+  h5,
+  .h5 {
+    font-size: .8125rem;
+  }
+  
+  h6,
+  .h6 {
+    font-size: .625rem;
+  }
+
+label {
+    color: var(--natwest-purple);
+}
+
+.btn {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  display: inline-block;
+  padding: .625rem 1.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  border-radius: .375rem;
+  position: relative;
+  letter-spacing: .025em;
+  text-transform: none;
+  will-change: transform;
+  color: var(--natwest-purple);
+  border-color: var(--natwest-purple);
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .btn {
+    transition: none;
+  }
+}
+
+.btn:hover,
+.btn:focus {
+  text-decoration: none;
+}
+.btn:hover {
+  transform: translateY(-1px);
+  border-color: var(--natwest-purple);
+  background-color: var(--natwest-purple);
+  box-shadow: 0 7px 14px var(--natwest-purple-light), 0 3px 6px rgba(0, 0, 0, .08);
+}
+
+.btn:focus {
+  outline: 0;
+  box-shadow: 0 7px 14px rgba(50, 50, 93, .1), 0 3px 6px rgba(0, 0, 0, .08);
+}
+
+.btn:disabled {
+  opacity: .65;
+  box-shadow: none;
+}
+
+.btn:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+
+.btn:not(:disabled):not(.disabled):active {
+  box-shadow: none;
+}
+
+.btn:not(:disabled):not(.disabled):active:focus {
+  box-shadow: 0 7px 14px rgba(50, 50, 93, .1), 0 3px 6px rgba(0, 0, 0, .08), none;
+}
+
+.btn:not(:last-child) {
+  margin-right: .5rem;
+}
+
+.btn i:not(:first-child) {
+  margin-left: .5rem;
+}
+
+.btn i:not(:last-child) {
+  margin-right: .5rem;
+}
+
+.input-group .btn {
+  margin-right: 0;
+  transform: translateY(0);
+}
+
+[class*='btn-outline-'] {
+  border-width: 1.5px;
+}
