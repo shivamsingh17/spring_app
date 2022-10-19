@@ -1,0 +1,16 @@
+<p style="color: var(--natwest-purple); font-size: 40px;">Hi, {{customer.firstName}}</p><br/>
+<p>Welcome to NatWest Group</p>
+<h1>Accounts</h1>
+<p>Balance details are shown here:</p>
+
+<div class="card-container">
+  <a class="card" >
+    <img width="40" alt="image" src="assets/wallet.png"/>
+    <b [ngStyle]="{'color': (customer.checkinBalance>=0) ? 'green' : 'red'}"><span>  {{customer.currency}} {{checkinBalance}}</span></b></a>
+
+    <a class="card">
+    <img width="40" alt="image" src="assets/piggy-bank.png"/>
+    <b [ngStyle]="{'color': (customer.savingsBalance>=0) ? 'green' : 'red'}"><span>  {{customer.currency}} {{savingsBalance}}</span></b>
+  </a>
+</div>
+
