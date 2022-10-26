@@ -1,0 +1,24 @@
+<!-- <div> -->
+<h1>Last Transactions</h1>
+<p>Description of last transactions:</p>
+<div *ngIf="transactions!=null&&transactions.length>0">
+  <div *ngFor="let txn of transactions" class="list-group " style="text-align: left; margin-bottom: 10px;">
+    <div href="#" class="list-group-item list-group-item-action d-flex  flex-column align-items-start" >
+      <div class="d-flex w-100 justify-content-between">
+        <h1 class="mb-1" style="text-decoration: bold;"><b [ngStyle]="{'color': (txn.customerId!=customer.id) ? 'green' : 'red'}">{{customer.currency}} {{commaSeparatedValue(txn.amount)}}</b><b style="font-size: 15px;"> ~ {{commaSeparatedValue(txn.roundedOffAmount)}}</b></h1>
+        <h2 class="mb-1"><img width="20" alt="image" src="assets/wallet.png"/>&nbsp;<b [ngStyle]="{'color': (txn.currentBalance>=0) ? 'green' : 'red'}">{{customer.currency}} {{commaSeparatedValue(txn.currentBalance)}}</b></h2>
+      </div>
+      <div class="d-flex w-100 justify-content-between">
+        <h2>{{(txn.customerId==customer.id)?'To:':'From'}} <b>{{(txn.customerId==customer.id)?txn.receiverAccountNumber:txn.customerAccountNumber}}</b></h2>
+      </div>
+      <div class="d-flex w-100 justify-content-between">
+        <h3 class="mb-1">Remarks: {{txn.remarks}}</h3>
+      </div>
+      <div class="d-flex w-100 justify-content-between">
+        <h4><u>{{txn.timeStamp}}</u></h4><h5 class="text-end">{{txn.id}}</h5>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="transactions==null||transactions.length==0"><h2>No Transactions Done!!</h2></div>
+  <!-- </div> -->
