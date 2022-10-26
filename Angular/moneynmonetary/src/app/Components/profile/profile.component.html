@@ -1,0 +1,140 @@
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="order-xl-1">
+      <div class="bg-secondary shadow">
+        <div class="card-header bg-white border-0">
+          <div class="row align-items-center">
+            <div class="col-8">
+              <h3 class="mb-0">My account</h3>
+            </div>
+            <div class="col-4 text-right">
+                <div class="col-lg-7 order-lg-2">
+                  <div class="card-profile-image">
+                    <!-- <a href="#"> -->
+                      <img [src]="profile.profileUrl" class="rounded-circle">
+                    <!-- </a> -->
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <form>
+            <h6 class="heading-small text-muted mb-4">User information</h6>
+            <div class="pl-lg-4">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="form-group focused">
+                    <label class="form-control-label" for="input-email">Email address</label>
+                    <input type="email" id="input-email" name="emailId" class="form-control form-control-alternative" [(ngModel)]="profile.emailId" placeholder="email@example.com">
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label class="form-control-label" for="input-password">Password</label>
+                    <input type="password" id="input-password" name="password" class="form-control form-control-alternative" [(ngModel)]="profile.password" disabled="true" placeholder="password">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="form-group focused">
+                    <label class="form-control-label" for="input-first-name">First name</label>
+                    <input type="text" id="input-first-name" name="firstName" class="form-control form-control-alternative" [(ngModel)]="profile.firstName" placeholder="First name"/><br />
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group focused">
+                    <label class="form-control-label" for="input-last-name">Last name</label>
+                    <input type="text" id="input-last-name" name="lastName" class="form-control form-control-alternative" [(ngModel)]="profile.lastName" placeholder="Last name">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group focused">
+                        <label class="form-control-label" for="input-mobile">Mobile</label>
+                        <input type="text" id="input-mobile" name="mobileNo" class="form-control form-control-alternative" [(ngModel)]="profile.mobileNo" placeholder="Mobile">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group focused">
+                    <label class="form-control-label" for="input-dob">Date Of Birth</label>
+                    <input type="text" id="input-dob" disabled="true" name="dob" class="form-control form-control-alternative" [(ngModel)]="todayWithPipe" placeholder="Date Of Birth">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-5">
+                    <div class="form-group focused">
+                        <label class="form-control-label" for="input-accNo">Acc No.</label>
+                        <input type="text" id="input-accNo" name="accNo" disabled="true" class="form-control form-control-alternative" [(ngModel)]="profile.accNo" placeholder="Acc No.">
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                  <div class="form-group focused">
+                    <label class="form-control-label" for="input-ifsc-code">IFSC</label>
+                    <input type="text" id="input-ifsc-code" disabled="true" name="ifsc-code" class="form-control form-control-alternative" [(ngModel)]="profile.ifscCode" placeholder="IFSC">
+                  </div>
+                </div>
+                <div class="col-lg-2">
+                  <div class="form-group focused">
+                      <label class="form-control-label" for="input-currency">Currency</label>
+                      <input type="text" id="input-currency" name="currency" class="form-control form-control-alternative" [(ngModel)]="profile.currency" placeholder="Currency">
+                  </div>
+              </div>
+              </div>
+            </div>
+            <hr class="my-4">
+            <!-- Address -->
+            <h6 class="heading-small text-muted mb-4">Contact information</h6>
+            <div class="pl-lg-4">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group focused">
+                    <label class="form-control-label" for="input-address">Address</label>
+                    <input id="input-address" class="form-control form-control-alternative" name="address" [(ngModel)]="profile.address" placeholder="Home Address" type="text">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-3">
+                  <div class="form-group focused">
+                    <label class="form-control-label" for="input-city">City</label>
+                    <input type="text" id="input-city" class="form-control form-control-alternative" name="city" [(ngModel)]="profile.city" placeholder="City" >
+                  </div>
+                </div>
+                <div class="col-lg-3">
+                  <div class="form-group focused">
+                    <label class="form-control-label" for="input-state">State</label>
+                    <input type="text" id="input-state" class="form-control form-control-alternative" name="state" [(ngModel)]="profile.state" placeholder="State" >
+                  </div>
+                </div>
+                <div class="col-lg-3">
+                  <div class="form-group focused">
+                    <label class="form-control-label" for="input-country">Country</label>
+                    <input type="text" id="input-country" class="form-control form-control-alternative" name="country" [(ngModel)]="profile.country" placeholder="Country" >
+                  </div>
+                </div>
+                <div class="col-lg-3">
+                  <div class="form-group">
+                    <label class="form-control-label" for="input-country">Postal code</label>
+                    <input type="number" id="input-postal-code" class="form-control form-control-alternative" name="zipcode" [(ngModel)]="profile.zipcode"  placeholder="Postal code">
+                  </div>
+                </div>
+                <div class="col-md-12 flex">
+                  <div class="form-group">
+                    <br/>
+                    <span (click)="save()" class="btn btn-outline-primary">Save</span>
+                    <span (click)="logout()" class="btn btn-outline-primary">Logout</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
