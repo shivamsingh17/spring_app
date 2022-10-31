@@ -1,0 +1,68 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center">
+                    <h1>Register</h1>
+                    <h6> Enter Details</h6>
+                </div>
+                <form [formGroup]="registrationForm" (ngSubmit)="signup()">
+                        <div class="mb-3">
+                          <label for="input-first-name" class="form-control-label">First Name</label>
+                          <input type="text" formControlName="firstName" id="input-first-name" name="firstName" class="form-control" placeholder="First name"/>
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-control-label" for="input-last-name">Last name</label>
+                          <input type="text" formControlName="lastName" id="input-last-name" name="lastName" class="form-control" placeholder="Last name">
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-control-label" for="input-mobile">Mobile</label>
+                          <input type="text" formControlName="mobileNo" id="input-mobile" name="mobileNo" class="form-control" placeholder="Mobile">
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-control-label" for="input-email">Email address</label>
+                          <input type="email" formControlName="emailId" id="input-email" name="emailId" class="form-control" placeholder="email@example.com" aria-describedby="emailHelp">
+                          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                          <span class="text-danger" *ngIf="(registrationForm.controls['emailId'].invalid && registrationForm.controls['emailId'].dirty || registrationForm.controls['emailId'].touched)">Enter Valid Email</span>
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-control-label" for="input-password">Password</label>
+                          <input type="password" formControlName="password" id="input-password" name="password" class="form-control" placeholder="Password">
+                          <span class="text-danger" *ngIf="registrationForm.controls['password'].invalid && (registrationForm.controls['password'].dirty || registrationForm.controls['password'].touched)">password cannot be blank</span>
+                        </div>
+                        <div class="mb-0">
+                          <label class="form-control-label" for="input-dob">Date Of Birth</label>
+                          <mat-form-field appearance="outline">
+                            <input formControlName="dob" id="input-dob" style="font-size: 14px;" matInput [matDatepicker]="picker" placeholder="MM/DD/YYYY">
+                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-datepicker #picker disabled="false"></mat-datepicker>
+                          </mat-form-field>
+                          
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-control-label" for="input-address">Address</label>
+                          <input type="text" formControlName="address" id="input-address" name="address" class="form-control" placeholder="Flat No. / Aparment">
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-control-label" for="input-city">City</label>
+                          <input type="text" formControlName="city" id="input-city" name="city" class="form-control" placeholder="City of residence">
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-control-label" for="input-state">State</label>
+                          <input type="text" formControlName="state" id="input-state" name="state" class="form-control" placeholder="State of residence">
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-control-label" for="input-country">Country</label>
+                          <input type="text" formControlName="country" id="input-country" name="country" class="form-control" placeholder="Country of residence">
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-control-label" for="input-state">Zipcode</label>
+                          <input type="text" formControlName="zipcode" id="input-zipcode" name="zipcode" class="form-control" placeholder="00-00-000">
+                        </div>
+                        <button type="submit" [disabled]="!registrationForm.valid" class="btn btn-outline-primary">Submit</button>
+                      </form>
+                      <a routerLink="/login">Already Registered ? login</a>
+            </div>
+        </div>
+    </div>
+</div>
