@@ -1,0 +1,17 @@
+<div class="card" style="width: 600px;">
+  <div class="text-center">
+    <h1>Transaction Verification</h1>
+    <h4> Enter the 6-digit OTP sent to registered email id.: {{maskedEmailId}} </h4>
+    <br/>
+  <form (ngSubmit)="pay()">
+    <div class="mb-3">
+      <input type="number" id="input-otp" name="otp" class="form-control text-center" autocomplete="one-time-code" pattern="\d{6}" required placeholder="XXX-XXX" [(ngModel)]="otpField">
+    </div>
+    <br>
+    <button class="btn btn-outline-primary">Pay</button>
+  </form>
+</div>
+</div>
+
+
+
