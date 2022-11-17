@@ -1,0 +1,73 @@
+<div class="container">
+
+    <form [formGroup]="fundTransferForm" (ngSubmit)="pay()">
+        <div class="row">
+            <div class="col">
+                <h3 class="title text-center">Payee's Details</h3>
+                    <div class="btnz">
+                      <button class="btn" type="button" (click)="verify()">
+                        &#10003; verify account
+                      </button>
+                    </div>
+                <div class="inputBox">
+                    <span>payee account number :</span>
+                    <input type="number" formControlName="accnumber" name="accnumber" placeholder="1111-2222-3333-XXXX">
+                    <span class="text-danger" *ngIf="(fundTransferForm.controls['accnumber'].invalid && fundTransferForm.controls['accnumber'].dirty || fundTransferForm.controls['accnumber'].touched)">Enter valid account No.</span>
+                </div>
+                <div class="inputBox">
+                    <span>re-enter payee account number :</span>
+                    <input type="number" formControlName="accnumber_conf" name="accnumber_conf" placeholder="1111-2222-3333-XXXX">
+                </div>
+                <div class="inputBox">
+                    <span>payee bank's IFSC :</span>
+                    <input type="text" formControlName="ifsc" name="ifsc">
+                    <span class="text-danger" *ngIf="(fundTransferForm.controls['ifsc'].invalid && fundTransferForm.controls['ifsc'].dirty || fundTransferForm.controls['ifsc'].touched)">Enter valid IFSC code.</span>
+                </div>
+                <div class="inputBox">
+                    <span>amount :</span>
+                    <input type="number" formControlName="amount" name="amount">
+                </div>
+
+                <div class="inputBox">
+                    <span>Please confirm amount :</span>
+                    <input type="number" formControlName="amountconf" name="amountconf">
+                </div>
+            </div>
+            <div class="col">
+                <h3 class="title text-center">transfer details</h3>
+                <div class="inputBox">
+                    <div style="padding-top: 43px"></div>
+                    <span>payee name :</span>
+                    <input type="text" formControlName="payeename" name="payeename" placeholder="Payee Name">
+                </div>
+                <div class="inputBox">
+                    <span>account to be transferred from :</span>
+                    <input type="text" formControlName="accNo" name="accNo">
+                </div>
+                <div class="inputBox">
+                    <span>account holder name :</span>
+                    <input type="text" formControlName="name_card" name="name_card"  placeholder="Account Holder Name">
+                </div>
+                <div class="inputBox">
+                    <label>
+                        Reason for transaction :
+                        <div style="padding-top: 10px"></div>
+                        <select> 
+                            <option>Please select</option>
+                            <option>Credit Card Payment</option>
+                            <option>Debit Card Payment</option>
+                            <option>E Payment</option>
+                            <option>Other</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="inputBox">
+                    <span>Payment remarks :</span>
+                    <input type="text" formControlName="remarks" name="remarks">
+                </div>
+            </div>
+        </div>
+        <button type="submit" value="Proceed to checkout" class="submit-btn">Proceed to checkout</button>
+
+    </form>
+</div>
