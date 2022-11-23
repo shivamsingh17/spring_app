@@ -1,0 +1,38 @@
+server:
+  port: 8081
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    fetch-registry: true
+    register-with-eureka: true
+
+  instance:
+    hostname: localhost
+
+
+spring:
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: email id
+    password: password
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+  jpa:
+    hibernate.ddl-auto: update
+    generate-ddl: true
+    show-sql: true
+  application:
+    name: MoneynMonetaryOtpService
+  thymeleaf:
+    cache: false
+    enabled: true
+    prefix:
+      classpath: /templates/
+    suffix: .html
